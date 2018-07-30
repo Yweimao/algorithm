@@ -5,6 +5,33 @@
     <title>判断素数</title>
 </head>
 <body>
+<script>
+    // 方法一:
+    function isPrime(num) {
+        if (num == 0 || num == 1){
+            return true;
+        }
+        for(var i = 2; i < num; i++){
+                if (num % i == 0) {
+                    return false;
+                }
 
+        }
+        return true
+    }
+    console.log(isPrime(3));
+    // 方法二:
+    function isParmiseT(num) {
+        if (num == 0 || num == 1) {
+            return true
+        }
+        for (var i = 2; i < Math.sqrt(num); i++) {
+            if (num % i == 0){
+                return false
+            }
+        }
+        return true
+    }
+</script>
 </body>
 </html>
